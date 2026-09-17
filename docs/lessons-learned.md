@@ -28,3 +28,4 @@ Antes de seguir con las 29 tasks, se validó si CumulusCI sigue vigente como met
 2. **"Mantenido" ≠ "estándar de mercado".** CCI tiene releases cada 1-3 meses y equipo de Salesforce detrás (commits `@W-…`). Eso prueba que no está muerto, no que un cliente enterprise lo use. Preguntar siempre: ¿quién lo mantiene? vs ¿quién lo usa y para qué modelo (org vs package development)?
 3. **El OKF de TA es estratégico; el hueco tool-level es real.** `lifecycle-deployment/` no mencionaba CCI ni DevOps Center nativo.
 4. **El clon local se desactualiza.** Fork en abril, upstream en septiembre. Antes de evaluar vigencia: `git fetch upstream` o `gh api repos/...`.
+5. **El fork tenía remote HTTPS sin credencial → `git push` falla con "could not read Username".** Cambiado a SSH (`git@github.com:fernand-zuili/CumulusCI.git`). Los demás repos ya usan SSH; verificar `git remote -v` en cada proyecto nuevo.
